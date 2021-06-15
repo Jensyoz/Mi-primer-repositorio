@@ -1,0 +1,1 @@
+Vector_ejemp=rep(1:100,by=10)
