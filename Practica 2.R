@@ -143,4 +143,3 @@ hist(Mispacientes$edad)
 
 
 
-
