@@ -103,15 +103,25 @@ View(Mispacientes)
  #Haga una descripción de datos cuantitativos
 
 max(Mispacientes$edad)
+#Edad Maxima del grupo de pacientes
+
 min(Mispacientes$edad)
+#Edad Minima del grupo de pacientes
 
 mean(Mispacientes$edad)
+#Edad media del grupo de pacientes
 
 sd(Mispacientes$edad)
+#La Variaciòn estandar entre las edades de los pacientes 
+# es la medida de dispersión más común, que indica qué tan
+#dispersos están los datos con respecto a la media
 
 round(sd(Mispacientes$edad),2)
+# Redondea un resultado 
 
 quantile(Mispacientes$edad)
+#Cuantiles son unas medidas de posición que dividen a la distribución en un cierto número de partes
+#de manera que en cada una de ellas hay el mismo de valores de la variable.
   
 FrecuenciaAbsoluta =table(glucemia_basal)
 
