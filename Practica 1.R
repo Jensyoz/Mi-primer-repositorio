@@ -73,21 +73,30 @@ max(Puntuacion)
 # Trae la puntuaciòn maxima de los elementos
 
 mean(Puntuacion)
-#
+# promedio de los elementos de x
 
 median(Puntuacion)
+# mediana de los elementos de x (valor que mas se repite)
 
 sort(Puntuacion)
+# ordena los elementos de x en orden ascendente
 
 plot(Puntuacion)
+#Grafico
 
 unique(Puntuacion)
 
+#si x es un vector o un marco de datos, devuelve un objeto similar pero suprimiendo 
+#elementos duplicados
+
 which.max(Puntuacion)
+#devuelve el ´indice del elemento maximo de ´ x
 
 which.min(Puntuacion)
+#devuelve el ´indice del elemento miinimo de x
 
 Sqrt (Puntuacion)
+#raiz cuadrada
 
 # 8.Genere un vector con valores del 1 al 100
 
