@@ -19,6 +19,7 @@ for (i in 1:final)
   {print(i)
 }
 
+
 # 2.Declare un tipo de variable double, integer y carácter
 
 #Double 
