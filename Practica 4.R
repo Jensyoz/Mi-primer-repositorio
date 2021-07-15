@@ -13,7 +13,7 @@ library("odbc")
 library("dbplyr")
 install.packages ("ggplot2")
 install.packages (" plotly ")
-library (plotly)
+library ("plotly")
 
 #· Conexiones SQL
 
@@ -27,18 +27,21 @@ DB_Northwind <- DBI::dbConnect(odbc::odbc(),
 
 
 
-Stock= dbGetQuery(DB_Northwind,"select * from [production].[stocks]")
+Stock =dbGetQuery(DB_Northwind,"select * from [production].[stocks]")
+
 
 
 View(Stock)
 
 #· Dplyr
 
-agrupe por tienda y sume la cantidad de todos los productos
+Agrupacion_por_tienda= Stock %>% group_by(store_id)%>%
+  summarise(sum(quantity))
+
+View(Agrupacion_por_tienda)
+
 
 #· Gpplot, plot, qplot o plotly
 
-qplot (store_id,product_id, data =Stock)
-
-, color = Species , size =  Petal.Width ,
-xlab = " Sepal " , ylab = " Petal " , principales = " Titulo " )
+qplot (store_id,`sum(quantity)`,data =Agrupacion_por_tienda, color =`sum(quantity)`,size=1,
+xlab = " Tienda " , ylab = " Cantidad ",main= "Inventario por tienda ")
