@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-# Cree un vector que contenga las notas de 10 estudiantes, debe utilizar la funciÛn names(),
-# adem·s aplique un plot.
+# Cree un vector que contenga las notas de 10 estudiantes, debe utilizar la funci√≥n names(),
+# adem√°s aplique un plot.
 
 Notas_Estudiantes=c(85,75,96,100,69,76,88,59,87,95)
 
@@ -10,10 +10,10 @@ names(Notas_Estudiantes)=c("Eduardo","Marcela","Valeria","Victor","Emerson","Dan
 plot(Notas_Estudiantes,type = "l")
 hist(Notas_Estudiantes,main = "Nota Estudiantes",col="blue")
 
-# Genere una base de datos en XLS, impÛrtela (trate que la base de datos contenga columnas
-# cuantitativas, es decir campos como, por ejemplo, edad, aÒo de nacimiento, factores, 
+# Genere una base de datos en XLS, imp√≥rtela (trate que la base de datos contenga columnas
+# cuantitativas, es decir campos como, por ejemplo, edad, a√±o de nacimiento, factores, 
 # cantidad de ventas, cantidad de compras, boolean), genere un proceso exploratorio y de 
-# transformaciÛn de datos, donde utilice las siguientes funciones:
+# transformaci√≥n de datos, donde utilice las siguientes funciones:
 
 # NOTA : Archivo que tome es el "Groceries data"
 
@@ -22,7 +22,7 @@ hist(Notas_Estudiantes,main = "Nota Estudiantes",col="blue")
 DatosComestibles= data.frame(DatosComestibles)
 
 
-# a.Guardar datos en variables temporales, es decir hijas de la variable de importaciÛn
+# a.Guardar datos en variables temporales, es decir hijas de la variable de importaci√≥n
 
 Var_TempDatosComestible= select(DatosComestibles,itemDescription,year,Member_number)
 
@@ -33,7 +33,7 @@ Var_semana= select(DatosComestibles,itemDescription,day_of_week,Date)
 View(Var_semana)
 
   
-# b. Al menos 2 operaciones aritmÈticas entre vectores
+# b. Al menos 2 operaciones aritm√©ticas entre vectores
 
 min(Var_TempDatosComestible$Member_number)
 max(Var_TempDatosComestible$Member_number)
@@ -48,11 +48,11 @@ View(filter(Var_semana,itemDescription=="tropical fruit"& day_of_week > 3))
 
 # D.Group by  
 
-AÒosagrupados=DatosComestibles%>%group_by(Member_number,year)%>%summarise(n=n())%>%filter(year=="2015")
+A√±osagrupados=DatosComestibles%>%group_by(Member_number,year)%>%summarise(n=n())%>%filter(year=="2015")
 
-view(AÒosagrupados)
+view(A√±osagrupados)
 
-# la cantidad de veces que compraron los miebros por aÒo
+# la cantidad de veces que compraron los miebros por a√±o
 
 # E. Arrege
 
@@ -70,15 +70,15 @@ DatosComestibles = mutate ( DatosComestibles , FechaHoy = date ())
 select(DatosComestibles,Member_number,itemDescription)
 
 
-# H. Debe entregar el cÛdigo, los resultados de ejecuciÛn y una pequeÒa descripciÛn de la 
+# H. Debe entregar el c√≥digo, los resultados de ejecuci√≥n y una peque√±a descripci√≥n de la 
 # idea que expuso en el modelo exploratorio
 
 # Respuesta H: Con las ejecuciones anteriores lo que se denota es cuales productos 
-# se consumieron por cada numero de miembro y la cantidad de veces al aÒo que lo 
+# se consumieron por cada numero de miembro y la cantidad de veces al a√±o que lo 
 # hicieron. A la vez los productos menos consumidos por semana.
 
-# 3.Una investigaciÛn realizada por la Universidad HispanoamÈrica detalla que los 
-# salarios mÌnimos para ciertos paÌses se conforman de la siguiente forma:
+# 3.Una investigaci√≥n realizada por la Universidad Hispanoam√©rica detalla que los 
+# salarios m√≠nimos para ciertos pa√≠ses se conforman de la siguiente forma:
 
 salarios=c(432.21,239.48,249.94,373.22,233.86,366,331.11,258.86,349.20,31.60)
 
@@ -87,23 +87,23 @@ names(salarios)=c("Argentina","Bolivia","Brasil","Chile","Colmbia","Ecuador",
 
 view(salarios)
                   
-# a. Encontrar el salario promedio de estos paÌses
+# a. Encontrar el salario promedio de estos pa√≠ses
 
 mean(salarios)
 
-# b. Encontrar la desviaciÛn est·ndar de la muestra.
+# b. Encontrar la desviaci√≥n est√°ndar de la muestra.
 
 sd(salarios)
 
 
-# c. Encuentre los salarios mÌnimos m·s altos y m·s bajos de la muestra
+# c. Encuentre los salarios m√≠nimos m√°s altos y m√°s bajos de la muestra
 
 min(salarios)
 max(salarios)
 
 
 # 4. De la base de datos proporciona, genere las estructuras donde muestre la 
-# cantidad de facturas hechas por empleado, adem·s muestre el nombre de los empleados.
+# cantidad de facturas hechas por empleado, adem√°s muestre el nombre de los empleados.
   
 Bases_empleados=data.frame(Bases_empleados)
 Bases_Factura=data.frame(Bases_Factura)
@@ -115,8 +115,8 @@ Facturas_por_empleado =Union_Bases%>% group_by(EmployeeID,LastName)%>%
 
 
 
-# 5. A continuaciÛn, se les muestra el ingreso de unidades de sacos de cafÈ por un 
-# periodo de tiempo son: 7, 6, 5, 8, 7, 7, 7, 5, 6, 8. Calcular la desviaciÛn est·ndar.                
+# 5. A continuaci√≥n, se les muestra el ingreso de unidades de sacos de caf√© por un 
+# periodo de tiempo son: 7, 6, 5, 8, 7, 7, 7, 5, 6, 8. Calcular la desviaci√≥n est√°ndar.                
                   
 periodo_tiempo= c(7, 6, 5, 8, 7, 7, 7, 5, 6, 8)
 
@@ -126,7 +126,7 @@ sd(periodo_tiempo)
                   
 quantile(periodo_tiempo) 
 
-# 7.	Realice una pequeÒa investigaciÛn sobre quÈ es stringr de la colecciÛn de paquetes 
+# 7.	Realice una peque√±a investigaci√≥n sobre qu√© es stringr de la colecci√≥n de paquetes 
 # Tidyvers :   Respuesta en Word
 
 
@@ -149,8 +149,8 @@ quantile(periodo_tiempo)
 
 
 =======
-# Cree un vector que contenga las notas de 10 estudiantes, debe utilizar la funciÛn names(),
-# adem·s aplique un plot.
+# Cree un vector que contenga las notas de 10 estudiantes, debe utilizar la funci√≥n names(),
+# adem√°s aplique un plot.
 
 Notas_Estudiantes=c(85,75,96,100,69,76,88,59,87,95)
 
@@ -160,10 +160,10 @@ names(Notas_Estudiantes)=c("Eduardo","Marcela","Valeria","Victor","Emerson","Dan
 plot(Notas_Estudiantes,type = "l")
 hist(Notas_Estudiantes,main = "Nota Estudiantes",col="blue")
 
-# Genere una base de datos en XLS, impÛrtela (trate que la base de datos contenga columnas
-# cuantitativas, es decir campos como, por ejemplo, edad, aÒo de nacimiento, factores, 
+# Genere una base de datos en XLS, imp√≥rtela (trate que la base de datos contenga columnas
+# cuantitativas, es decir campos como, por ejemplo, edad, a√±o de nacimiento, factores, 
 # cantidad de ventas, cantidad de compras, boolean), genere un proceso exploratorio y de 
-# transformaciÛn de datos, donde utilice las siguientes funciones:
+# transformaci√≥n de datos, donde utilice las siguientes funciones:
 
 # NOTA : Archivo que tome es el "Groceries data"
 
@@ -172,7 +172,7 @@ hist(Notas_Estudiantes,main = "Nota Estudiantes",col="blue")
 DatosComestibles= data.frame(DatosComestibles)
 
 
-# a.Guardar datos en variables temporales, es decir hijas de la variable de importaciÛn
+# a.Guardar datos en variables temporales, es decir hijas de la variable de importaci√≥n
 
 Var_TempDatosComestible= select(DatosComestibles,itemDescription,year,Member_number)
 
@@ -183,7 +183,7 @@ Var_semana= select(DatosComestibles,itemDescription,day_of_week,Date)
 View(Var_semana)
 
   
-# b. Al menos 2 operaciones aritmÈticas entre vectores
+# b. Al menos 2 operaciones aritm√©ticas entre vectores
 
 min(Var_TempDatosComestible$Member_number)
 max(Var_TempDatosComestible$Member_number)
@@ -198,11 +198,11 @@ View(filter(Var_semana,itemDescription=="tropical fruit"& day_of_week > 3))
 
 # D.Group by  
 
-AÒosagrupados=DatosComestibles%>%group_by(Member_number,year)%>%summarise(n=n())%>%filter(year=="2015")
+A√±osagrupados=DatosComestibles%>%group_by(Member_number,year)%>%summarise(n=n())%>%filter(year=="2015")
 
-view(AÒosagrupados)
+view(A√±osagrupados)
 
-# la cantidad de veces que compraron los miebros por aÒo
+# la cantidad de veces que compraron los miebros por a√±o
 
 # E. Arrege
 
@@ -220,15 +220,15 @@ DatosComestibles = mutate ( DatosComestibles , FechaHoy = date ())
 select(DatosComestibles,Member_number,itemDescription)
 
 
-# H. Debe entregar el cÛdigo, los resultados de ejecuciÛn y una pequeÒa descripciÛn de la 
+# H. Debe entregar el c√≥digo, los resultados de ejecuci√≥n y una peque√±a descripci√≥n de la 
 # idea que expuso en el modelo exploratorio
 
 # Respuesta H: Con las ejecuciones anteriores lo que se denota es cuales productos 
-# se consumieron por cada numero de miembro y la cantidad de veces al aÒo que lo 
+# se consumieron por cada numero de miembro y la cantidad de veces al a√±o que lo 
 # hicieron. A la vez los productos menos consumidos por semana.
 
-# 3.Una investigaciÛn realizada por la Universidad HispanoamÈrica detalla que los 
-# salarios mÌnimos para ciertos paÌses se conforman de la siguiente forma:
+# 3.Una investigaci√≥n realizada por la Universidad Hispanoam√©rica detalla que los 
+# salarios m√≠nimos para ciertos pa√≠ses se conforman de la siguiente forma:
 
 salarios=c(432.21,239.48,249.94,373.22,233.86,366,331.11,258.86,349.20,31.60)
 
@@ -237,23 +237,23 @@ names(salarios)=c("Argentina","Bolivia","Brasil","Chile","Colmbia","Ecuador",
 
 view(salarios)
                   
-# a. Encontrar el salario promedio de estos paÌses
+# a. Encontrar el salario promedio de estos pa√≠ses
 
 mean(salarios)
 
-# b. Encontrar la desviaciÛn est·ndar de la muestra.
+# b. Encontrar la desviaci√≥n est√°ndar de la muestra.
 
 sd(salarios)
 
 
-# c. Encuentre los salarios mÌnimos m·s altos y m·s bajos de la muestra
+# c. Encuentre los salarios m√≠nimos m√°s altos y m√°s bajos de la muestra
 
 min(salarios)
 max(salarios)
 
 
 # 4. De la base de datos proporciona, genere las estructuras donde muestre la 
-# cantidad de facturas hechas por empleado, adem·s muestre el nombre de los empleados.
+# cantidad de facturas hechas por empleado, adem√°s muestre el nombre de los empleados.
   
 Bases_empleados=data.frame(Bases_empleados)
 Bases_Factura=data.frame(Bases_Factura)
@@ -265,8 +265,8 @@ Facturas_por_empleado =Union_Bases%>% group_by(EmployeeID,LastName)%>%
 
 
 
-# 5. A continuaciÛn, se les muestra el ingreso de unidades de sacos de cafÈ por un 
-# periodo de tiempo son: 7, 6, 5, 8, 7, 7, 7, 5, 6, 8. Calcular la desviaciÛn est·ndar.                
+# 5. A continuaci√≥n, se les muestra el ingreso de unidades de sacos de caf√© por un 
+# periodo de tiempo son: 7, 6, 5, 8, 7, 7, 7, 5, 6, 8. Calcular la desviaci√≥n est√°ndar.                
                   
 periodo_tiempo= c(7, 6, 5, 8, 7, 7, 7, 5, 6, 8)
 
@@ -276,7 +276,7 @@ sd(periodo_tiempo)
                   
 quantile(periodo_tiempo) 
 
-# 7.	Realice una pequeÒa investigaciÛn sobre quÈ es stringr de la colecciÛn de paquetes 
+# 7.	Realice una peque√±a investigaci√≥n sobre qu√© es stringr de la colecci√≥n de paquetes 
 # Tidyvers :   Respuesta en Word
 
 
@@ -287,7 +287,7 @@ quantile(periodo_tiempo)
 
 
 
-
+Nota 100
 
 
 
